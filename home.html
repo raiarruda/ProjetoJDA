@@ -1,20 +1,3 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Gist
- @raiarruda
- Unwatch 2
-  Star 0
-  Fork 0 raiarruda/ProjetoJDA
- Code  Issues 0  Pull requests 0  Projects 1  Wiki  Pulse  Graphs  Settings
-Branch: master Find file Copy pathProjetoJDA/login.html
-2e3f45a  3 hours ago
- Raissa Arruda de Araújo Commit by raissa
-0 contributors
-RawBlameHistory     
-171 lines (159 sloc)  5.74 KB
 <!DOCTYPE html>
 <html lang="pt-BR" ng-app="usuarios">
 	<head>
@@ -23,7 +6,7 @@ RawBlameHistory
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-		<title>Login</title>
+		<title>Home</title>
 
 		<!-- Bootstrap -->
 		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -120,72 +103,85 @@ RawBlameHistory
 
 			<hr class="divider">
 			<div class="row">
-				<div class="col-md-6"  >
+				<div class="col-md-4"  >
 					<div class=" panel panel-info">
 
 						<div class="panel-heading">
-							<h3 class="panel-title">Login</h3>
+							<h3 class="panel-title">Categorias</h3>
 						</div>
 						<div class="panel-body">
-							<div ng-show"error" class="alert alert-danger">
-								{{error}}
-							</div>
-							<form name="login" ng-submit="login()" role="form">
-								<div class="form-group">
-									<div class="input-group">
-										<span class="input-group-addon"> <i class="glyphicon glyphicon-user"></i></span>
-										<input type="text" class="form-control" placeholder="usuario" ng-model="nomeDoUsuario" required />
-										<span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">Username is required</span>
-									</div>
-								</div>
-								<div class="form-group">
-									<div class="input-group">
-										<span class="input-group-addon"> <i class="glyphicon glyphicon-lock"></i></span>
-										<input type="password" class="form-control" placeholder="senha" ng-model="senhaDoUsuario" required />
-										<span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required</span>
-									</div>
-								</div>
-								<div class="form-actions">
-									<button type="submit" ng-disabled="form.$invalid || dataLoading" class="btn btn-info">
-									Entrar
-								</button></div>
-							</form>
+							
 						</div>
 					</div>
 				</div>
 
-				<div class="col-md-6">
-					<div class="panel panel-success " ng-controller="usuariosController">
+				<div class="col-md-8">
+					<div class="panel panel-warning " >
 						<div class="panel-heading">
-							<h3 class="panel-title">Cadastrar</h3>
+							<h3 class="panel-title">Alertas</h3>
 						</div>
 						<div class="panel-body">
-							<form>
-								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Escolha seu nome de usuário" ng-model="usuario">
+
+						</div>
+
+					</div>
+					<div class="panel panel-success " >
+						<div class="panel-heading">
+							<h3 class="panel-title">Chat</h3>
+						</div>
+						<div class="panel-body">
+							<div class="container">
+								<div class="row message-bubble">
+									<p class="text-muted">
+										Matt Townsen
+									</p>
+									<span>Why is yo shit so broke?</span>
 								</div>
-								<div class="form-group">
-									<input type="password" class="form-control" placeholder="Escolha sua senha" ng-model="senha">
+								<div class="row message-bubble">
+									<p class="text-muted">
+										Matt Townsen
+									</p>
+									<p>
+										It Isn't'
+									</p>
 								</div>
-								<button type="button" class="btn btn-success" ng-click="adicionarUsuario(usuario,senha)">
-									Cadastrar
-								</button>
-							</form>
-							
-							{{usuarios}}
+								<div class="row message-bubble">
+									<p class="text-muted">
+										Matt Townsen
+									</p>
+									<p>
+										Umm yes it is
+									</p>
+								</div>
+								<div class="row message-bubble">
+									<p class="text-muted">
+										Matt Townsen
+									</p>
+									<p>
+										Test message
+									</p>
+								</div>
+							</div>
+
+						</div>
+						<div class="panel-footer">
+							<div class="input-group">
+								<input type="text" class="form-control">
+								<span class="input-group-btn">
+									<button class="btn btn-default" type="button">
+										Enviar
+									</button> </span>
+							</div>
 						</div>
 					</div>
-
 				</div>
 
 			</div>
 			<!--fecha conteudo da pagina-->
 
 			<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-			<script src="jquery-3.1.1.min.js"></script>
+			<script src="assets/js/jquery-3.1.1.min.js"></script>
 			<!-- Include all compiled plugins (below), or include individual files as needed -->
 			<script src="assets/js/bootstrap.min.js"></script>
 	</body>
 </html>
-Contact GitHub API Training Shop Blog About
-© 2016 GitHub, Inc. Terms Privacy Security Status Help
