@@ -1,161 +1,63 @@
 <!DOCTYPE html>
-<html lang="pt-BR" ng-app="app">
+<html lang="p">
 	<head>
 		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-		<title>Minimercado</title>
 
-		<!-- Bootstrap -->
-		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-		<style type="text/css">
-			.marketing {
-				text-align: center;
-				margin-bottom: 20px;
-			}
-			.divider {
-				margin: 80px 0;
-			}
-			hr {
-				border: solid 1px #eee;
-			}
+		<title>index</title>
+		<meta name="description" content="">
+		<meta name="author" content="Raissa Arruda">
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+		<!--Estilos-->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/app.css" rel="stylesheet" />
+		<!--Scripts-->
+		<script src="lib/angular.js"></script>
+		<script src="js/app.js"></script>
+		<script src="js/controllers/usuariosController.js"></script>
 
-		</style>
-		<script src="assets/angular/angular.js"></script>
-		<script>
-			
-			
-			
-			
-			
-		</script>
 	</head>
-	<body >
 
-		<!--barra de navegacao-->
-		<nav class="navbar navbar-default navbar-inverse" style="border-radius:0px !important; margin-bottom:0px">
-			<div class="container-fluid">
-				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="index.html">Minimercado</a>
-				</div>
+	<body>
 
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav navbar-right">
-						<li>
-							<form class="navbar-form">
-								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Search">
-								</div>
-								<button type="submit" class="btn btn-default">
-									<i class="glyphicon glyphicon-search" ></i>
-								</button>
-							</form>
-						</li>
-						<li class="dropdown js-session  dropdown-toggle js-dropdown-toggle dropdown-signin">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> LOGIN <span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li class="container" style="max-width: 300px">
-
-									<form name="login" ng-submit="login()" role="form">
-										<div class="form-group">
-											<div class="input-group">
-												<span class="input-group-addon"> <i class="glyphicon glyphicon-user"></i></span>
-												<input type="text" class="form-control" placeholder="usuario" ng-model="nomeDoUsuario" required />
-												<span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">Username is required</span>
-											</div>
-										</div>
-										<div class="form-group">
-											<div class="input-group">
-												<span class="input-group-addon"> <i class="glyphicon glyphicon-lock"></i></span>
-												<input type="password" class="form-control" placeholder="senha" ng-model="senhaDoUsuario" required />
-												<span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required</span>
-											</div>
-										</div>
-										<div class="form-actions">
-
-											<button type="button"  data-toggle="modal" data-target="#modalCadastro"class="btn btn-danger pull-left">
-												Cadastrar
-											</button>
-											<button type="submit" ng-disabled="form.$invalid || dataLoading" class="btn btn-info pull-right">
-												Entrar
-											</button>
-
-										</div>
-
-									</form>
-
-								</li>
-
-							</ul>
-						</li>
-					</ul>
-				</div><!-- /.navbar-collapse -->
-			</div><!-- /.container-fluid -->
-		</nav>
-		<!--fecha barra de navegacao-->
 
 		<div class="clearfix" style="margin-bottom:20px;"></div>
-		<div class="container" ng-controller="produtosController">
 
-			<!--local escrever missoes-->
-			<div class="panel panel-success">
-				<div class="panel-heading">
-					<h3 class="panel-title">Missão Atual</h3>
+		<div class="container centralizarLogin">
+			<form class="form-horizontal">
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Usuário</label>
+					<div class="col-sm-10">
+						<input type="email" class="form-control"  placeholder="usuario">
+					</div>
 				</div>
-				<div class="panel-body">
-
-					teste
-				</div>
-
-			</div>
-			<!--Marketing-->
-			<hr class="divider">
-			<!--Product Thumbnail-->
-			<div class="row" >
-				<div class="col-sm-6 col-md-3" ng-repeat="produto in produtos">
-					<div class="thumbnail">
-						<img src={{produto.image}} alt="thumb01">
-						<div class="caption">
-							<h3>{{produto.nome}}</h3>
-							<p>
-								{{produto.descricao}}
-							</p>
-							<p>
-								<button class="btn btn-primary" ng-click="adicionaNoCarrinho(produto)">
-									Comprar
-								</button>
-							</p>
-						</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Senha</label>
+					<div class="col-sm-10">
+						<input type="password" class="form-control"  placeholder="senha">
 					</div>
 				</div>
 
-			</div>
-			<!--fech thumb253-3-->
+				<div class="form-actions ">
+
+					<button type="button"  data-toggle="modal" data-target="#modalCadastro"class="btn btn-danger pull-left">
+						Cadastrar
+					</button>
+					<button type="submit"  class="btn btn-info pull-right">
+						Entrar
+					</button>
+
+				</div>
+
+			</form>
+
 		</div>
 
-		<!--fecha Product Thumbnail-->
-		<hr class="divider">
-
-		<footer>
-			<p class="pull-right">
-				<a href="#">Voltar ao topo da página</a>
-			</p>
-		</footer>
-
-		<!--fecha Marketing-->
-
-
-		<!-- Modal cadastro-->
-		<div class="modal fade" id="modalCadastro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"  ng-controller="usuariosController">
+		<!--Modal de Cadastro-->
+		<div class="modal fade" id="modalCadastro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -167,33 +69,43 @@
 					<div class="modal-body">
 						<form>
 							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Escolha seu nome de usuário" ng-model="usuario">
+								<label class=" control-label">Nome</label>
+								<input type="text" class="form-control" placeholder="Como gostaria de ser chamado?">
 							</div>
 							<div class="form-group">
-								<input type="password" class="form-control" placeholder="Escolha sua senha" ng-model="senha">
+								<label class=" control-label">Usuário</label>
+								<input type="text" class="form-control" placeholder="Escolha seu nome de usuário">
+							</div>
+							<div class="form-group">
+								<label class="control-label">Senha</label>
+								<input type="password" class="form-control" placeholder="Escolha sua senha" >
+							</div>
+							<div class="form-group">
+								<label class="control-label">Confirmação da Senha</label>
+								<input type="password" class="form-control" placeholder="Confirme sua senha">
 							</div>
 
 						</form>
-						
-						{{usuario}} - {{senha}} {{usuarios}}
+
 					</div>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">
-						Cancelar 
+						Cancelar
 					</button>
 					<button type="button" class="btn btn-success" ng-click="adicionarUsuario(usuario,senha)">
 						Cadastrar
 					</button>
-					
-					
+
 				</div>
 			</div>
 		</div>
-		</div>
+
+		<!-- Modal de Cadastro-->
+
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="assets/js/jquery-3.1.1.min.js"></script>
+		<script src="lib/jquery-3.1.1.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="lib/bootstrap.min.js"></script>
 	</body>
 </html>
