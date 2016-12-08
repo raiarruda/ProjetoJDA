@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="p">
+<html lang="pt-BR" ng-app="minimercado">
 	<head>
 		<meta charset="utf-8">
 
@@ -21,13 +21,12 @@
 
 	</head>
 
-	<body>
-
+	<body ng-controller="usuariosController as vm">
 
 		<div class="clearfix" style="margin-bottom:20px;"></div>
 
 		<div class="container centralizarLogin">
-			<form class="form-horizontal">
+			<form class="form-horizontal" >
 				<div class="form-group">
 					<label class="col-sm-2 control-label">Usuário</label>
 					<div class="col-sm-10">
@@ -42,7 +41,7 @@
 				</div>
 
 				<div class="form-actions ">
-
+					{{usuarios}}
 					<button type="button"  data-toggle="modal" data-target="#modalCadastro"class="btn btn-danger pull-left">
 						Cadastrar
 					</button>
@@ -67,22 +66,26 @@
 						<h4 class="modal-title" id="myModalLabel">Cadastro</h4>
 					</div>
 					<div class="modal-body">
-						<form>
-							<div class="form-group">
-								<label class=" control-label">Nome</label>
-								<input type="text" class="form-control" placeholder="Como gostaria de ser chamado?">
+						<form novalidate name="customerForm" ng-submit="vm.save(vm.customer)">
+							<div class="form-group"  ng-class="{'has-error' : customerForm.name.$invalid && !customerForm.name.$pristine}">
+								<label class=" control-label">Nome: {{nomeUsuario}}</label>
+								<input name:"nomeUsuario" type="text" class="form-control" placeholder="Como gostaria de ser chamado?" required ng-minlength="3" ng-model="nomeUsuario">
+								<p ng-show="customerForm.nomeUsuario.$error.minlength"
+								class="help-block">
+									Name too short!
+								</p>
 							</div>
 							<div class="form-group">
-								<label class=" control-label">Usuário</label>
-								<input type="text" class="form-control" placeholder="Escolha seu nome de usuário">
+								<label class=" control-label">Usuário {{loginUsuario}}</label>
+								<input type="text" class="form-control" placeholder="Escolha seu nome de usuário" ng-model="loginUsuario">
 							</div>
 							<div class="form-group">
-								<label class="control-label">Senha</label>
-								<input type="password" class="form-control" placeholder="Escolha sua senha" >
+								<label class="control-label">Senha {{senhaUsuario}}</label>
+								<input type="password" class="form-control" placeholder="Escolha sua senha" ng-model="senhaUsuario">
 							</div>
 							<div class="form-group">
-								<label class="control-label">Confirmação da Senha</label>
-								<input type="password" class="form-control" placeholder="Confirme sua senha">
+								<label class="control-label">Confirmação da Senha {{senhaUsuario==confirmaSenhaUsuario}}</label>
+								<input type="password" class="form-control" placeholder="Confirme sua senha" ng-model="confirmaSenhaUsuario">
 							</div>
 
 						</form>
@@ -93,7 +96,7 @@
 					<button type="button" class="btn btn-default" data-dismiss="modal">
 						Cancelar
 					</button>
-					<button type="button" class="btn btn-success" ng-click="adicionarUsuario(usuario,senha)">
+					<button type="button" class="btn btn-success" ng-click="adicionaUsuario(nomeUsuario,loginUsuario,senhaUsuario)">
 						Cadastrar
 					</button>
 

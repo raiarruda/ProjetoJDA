@@ -1,18 +1,16 @@
 angular.module("minimercado").controller("usuariosController", function($scope) {
 
-	$scope.usuarios = [{
-		nome : "raissa",
-		senha : "1234"
-	}, {
-		nome : "paulo",
-		senha : "1234"
-	}, {
-		nome : "emanuel",
-		senha : "1234"
-	}];
+	$scope.usuarios = [];
 
-	$scope.adicionaUsuario = function(usuario) {
-		$scope.carrinho.push(usuario);
+	$scope.adicionaUsuario = function(nomeUsuario, loginUsuario, senhaUsuario) {
+		$scope.usuario = {
+			nomeUsuario : $scope.nomeUsuario,
+			loginUsuario : $scope.loginUsuario,
+			senhaUsuario : $scope.senhaUsuario
+		};
+
+		$scope.usuarios.push($scope.usuario);
 	};
 
-}); 
+});
+
