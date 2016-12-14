@@ -4,6 +4,7 @@
 
 	$categoria = isset($_GET['fk_categoria']) ? mysql_real_escape_string($_GET['fk_categoria']) :  "";
 	$id = isset($_GET['id']) ? mysql_real_escape_string($_GET['id']) :  "";
+	
 	if(empty($categoria) || empty($id)){
 		mysql_set_charset('utf8');
 		$qur = mysql_query("select `produto`.id, `categoria`.nome as categoria_nome, `produto`.nome, `produto`.descricao, `produto`.valor from `produto` inner join `categoria` on `produto`.fk_categoria = `categoria`.id");
