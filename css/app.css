@@ -8,3 +8,15 @@
 	max-width: 200px;
 	
 }
+.marketing{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .divider{
+    margin: 80px 0;
+  }
+  hr{
+    border: solid 1px #eee;
+  }
+
+  
