@@ -10,7 +10,7 @@
 		<title>index</title>
 		<meta name="description" content="">
 		<meta name="author" content="Raissa Arruda">
-		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!--Estilos-->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/app.css" rel="stylesheet" />
@@ -66,45 +66,37 @@
 						<h4 class="modal-title" id="myModalLabel">Cadastro</h4>
 					</div>
 					<div class="modal-body">
-						<form novalidate name="customerForm" ng-submit="vm.save(vm.customer)">
-							<div class="form-group"  ng-class="{ 'has-error' : customerForm.name.$invalid && !customerForm.name.$pristine }">
+					
+						<form novalidate name="cadastroForm" ng-submit="cadastrarUsuario(cadastroForm.$valid)">
+							<div class="form-group" ng-class="{ 'has-error' : cadastroForm.nomeUsuario.$invalid && !cadastroForm.nomeUsuario.$pristine }">
 								<label class=" control-label">Nome: {{nomeUsuario}}</label>
-								<input name:"name" type="text" class="form-control" placeholder="Como gostaria de ser chamado?" required ng-minlength="3" ng-model="nomeUsuario">
+								<input name:"nomeUsuario" type="text" class="form-control" placeholder="Como gostaria de ser chamado?" ng-model="nomeUsuario" required>
+							
 							</div>
-							<div class="form-group">
+							<div class="form-group"ng-class="{ 'has-error' : cadastroForm.loginUsuario.$invalid && !cadastroForm.loginUsuario.$pristine }">
 								<label class=" control-label">Usuário {{loginUsuario}}</label>
-								<input type="text" class="form-control" placeholder="Escolha seu nome de usuário" ng-model="loginUsuario">
+								<input name="loginUsuario" type="text" class="form-control" placeholder="Escolha seu nome de usuário" ng-model="loginUsuario" ng-minlength="3" ng-maxlength="8" required>
+							
 							</div>
-							<div class="form-group" ng-class="{ 'has-error' : customerForm.password.$invalid && !customerForm.password.$pristine }">
+							<div class="form-group" ng-class="{ 'has-error' : cadastroForm.senhaUsuario.$invalid && !cadastroForm.senhaUsuario.$pristine }">
 								<label class="control-label">Senha {{senhaUsuario}}</label>
-								<input name="password" type="password" class="form-control" placeholder="Escolha sua senha" ng-model="vm.customer.password" ng-minlength="5" ng-maxlength="8">
-								<p ng-show="customerForm.password.$error.minlength"
-								class="help-block">
-									Password too short!
-								</p>
-								<p ng-show="customerForm.password.$error.maxlength"
-								class="help-block">
-									Password too long!
-								</p>
-							</div>
-							<div class="form-group">
-								<label class="control-label">Confirmação da Senha {{senhaUsuario==confirmaSenhaUsuario}}</label>
-								<input type="password" class="form-control" placeholder="Confirme sua senha" ng-model="confirmaSenhaUsuario">
-							</div>
+								<input name="senhaUsuario" type="password" class="form-control" placeholder="Escolha sua senha" ng-model="senhaUsuario" ng-minlength="5" ng-maxlength="8" required>
+							
+							
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">
+									Cancelar
+								</button>
+								<button type="submit" class="btn btn-success" ng-disabled="cadastroForm.$invalid" data-dismiss="modal">
+									Cadastrar
+								</button>
 
+							</div>
 						</form>
 
 					</div>
 				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">
-						Cancelar
-					</button>
-					<button type="button" class="btn btn-success" ng-click="adicionaUsuario(nomeUsuario,loginUsuario,senhaUsuario)">
-						Cadastrar
-					</button>
 
-				</div>
 			</div>
 		</div>
 
