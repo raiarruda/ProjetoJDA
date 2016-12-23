@@ -1,0 +1,29 @@
+pq isso não aparece aff
+
+<form novalidate name="cadastroForm" ng-submit="cadastrarUsuario(cadastroForm.$valid)">
+    <div class="form-group" ng-class="{ 'has-error' : cadastroForm.nomeUsuario.$invalid && !cadastroForm.nomeUsuario.$pristine }">
+        <label class=" control-label">Nome: {{nomeUsuario}}</label>
+        <input name="nomeUsuario" type="text" class="form-control" placeholder="Como gostaria de ser chamado?" ng-model="nomeUsuario" required>
+
+    </div>
+    <div class="form-group"ng-class="{ 'has-error' : cadastroForm.loginUsuario.$invalid && !cadastroForm.loginUsuario.$pristine }">
+        <label class=" control-label">Usuário {{loginUsuario}}</label>
+        <input name="loginUsuario" type="text" class="form-control" placeholder="Escolha seu nome de usuário" ng-model="loginUsuario" ng-minlength="3" ng-maxlength="8" required>
+
+    </div>
+    <div class="form-group" ng-class="{ 'has-error' : cadastroForm.senhaUsuario.$invalid && !cadastroForm.senhaUsuario.$pristine }">
+        <label class="control-label">Senha {{senhaUsuario}}</label>
+        <input name="senhaUsuario" type="password" class="form-control" placeholder="Escolha sua senha" ng-model="senhaUsuario" ng-minlength="5" ng-maxlength="8" required>
+
+
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+                Cancelar
+            </button>
+            <button type="submit" class="btn btn-success" ng-disabled="cadastroForm.$invalid" data-dismiss="modal">
+                Cadastrar
+            </button>
+
+        </div>
+    </div>
+</form>

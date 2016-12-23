@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-sm-3 col-md-3" ng-repeat="produto in produtos">
+        <div class="thumbnail">
+            <!--<img ng-src='{{produto.image}}' alt="thumb01">-->
+            <img src='/app/imagens/produtos/produto.jpg' alt="thumb01">
+            <div class="caption">
+                <h3>{{produto.nome}}</h3>
+                <p>{{produto.descricao}}</p>
+                <p>
+                    <button class="btn btn-primary" ng-click="adicionarProdutoNoCarrinho(produto)">
+                        Comprar
+                    </button>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
