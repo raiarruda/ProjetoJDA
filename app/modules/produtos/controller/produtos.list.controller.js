@@ -1,26 +1,27 @@
-(function (){
+(function() {
 
-    angular.module('MiniMercado.Produtos')
-        .controller('ProdutosListController',ProdutosListController);
+	angular.module('MiniMercado.Produtos').controller('ProdutosListController', ProdutosListController);
 
-    ProdutosListController.$inject = ['$scope', 'ProdutoService', 'CarrinhoService'];
+	ProdutosListController.$inject = ['$scope', 'ProdutoService', 'CarrinhoService'];
 
-    function ProdutosListController($scope, ProdutoService, CarrinhoService){
-        
-        $scope.adicionarProdutoNoCarrinho = function (produto){
-            CarrinhoService.adicionarProduto(produto);
-        };
+	function ProdutosListController($scope, ProdutoService, CarrinhoService) {
 
+		$scope.adicionarProdutoNoCarrinho = function(produto) {
+			CarrinhoService.adicionarProduto(produto);
+		};
+		$scope.removerProdutoNoCarrinho = function(produto) {
+			CarrinhoService.removerProduto(produto);
+		};
 
-        function carregarListaDeProdutos(){
-            ProdutoService.list().then(function (produtos) {
-                $scope.produtos = produtos;
-            });
-        }
+		function carregarListaDeProdutos() {
+			ProdutoService.list().then(function(produtos) {
+				$scope.produtos = produtos;
+			});
+		}
 
-        (function init(){
-            carregarListaDeProdutos();
-        })();
-    }
+		(function init() {
+			carregarListaDeProdutos();
+		})();
+	}
 
-})();
+})(); 

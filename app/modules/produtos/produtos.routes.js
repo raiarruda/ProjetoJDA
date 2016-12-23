@@ -17,8 +17,14 @@
                 url: '/',
                 controller: 'ProdutosListController',
                 templateUrl: 'app/modules/produtos/view/index.html'
-            });
-        // .state('app.dashboard', {
+            })
+            .state('app.produtos.carrinho',{
+            	url:'/carrinho',
+            	controller:'ProdutosCarrinhoController',
+            	templateUrl:'app/modules/produtos/view/carrinho.html'
+            })
+            ;
+        // .state('app.dashboard', {s
         //     url: '/dashboard',
         //     title: 'Dashboard',
         //     templateUrl: helper.basepath('dashboard.html'),

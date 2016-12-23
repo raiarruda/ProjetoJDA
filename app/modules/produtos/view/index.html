@@ -1,17 +1,26 @@
 <div class="row">
-    <div class="col-sm-3 col-md-3" ng-repeat="produto in produtos">
-        <div class="thumbnail">
-            <!--<img ng-src='{{produto.image}}' alt="thumb01">-->
-            <img src='/app/imagens/produtos/produto.jpg' alt="thumb01">
-            <div class="caption">
-                <h3>{{produto.nome}}</h3>
-                <p>{{produto.descricao}}</p>
-                <p>
-                    <button class="btn btn-primary" ng-click="adicionarProdutoNoCarrinho(produto)">
-                        Comprar
-                    </button>
-                </p>
-            </div>
-        </div>
-    </div>
+	<div class="col-sm-3 col-md-3" ng-repeat="produto in produtos">
+		<div class="thumbnail">
+			<!--<img ng-src='{{produto.image}}' alt="thumb01">-->
+			<img src='app/imagens/produtos/produto.jpg' alt="thumb01">
+			<div class="caption">
+				<h3>{{produto.nome}}</h3>
+				<p>
+					{{produto.descricao}}
+				</p>
+				<div class="row">
+					<div class="col-md-6 col-xs-12">
+						<button class="btn btn-primary" ng-click="adicionarProdutoNoCarrinho(produto)">
+							Comprar
+						</button>
+					</div>
+					<div class="col-md-6 col-xs-12">
+						<button class="btn btn-danger" ng-click="removerProdutoNoCarrinho(produto)">
+							Remover
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

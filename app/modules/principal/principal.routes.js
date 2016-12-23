@@ -10,6 +10,7 @@
         $stateProvider
             .state('app', {
                 url: '',
+                controller: 'PrincipalController',
                 templateUrl: 'app/modules/principal/view/index.html'
             });
     }
