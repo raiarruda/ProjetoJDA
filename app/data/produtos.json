@@ -1,0 +1,60 @@
+{"data":[
+	{
+		"id": 1,
+		"nome": "Sal Grosso",
+		"imagem": "",
+		"categoria_id":"1",
+		"descricao":"Marca X",
+		"valor": 1.0
+	},
+	{
+		"id": 2,
+		"nome": "Picanha",
+		"imagem": "",
+		"categoria_id":"1",
+		"descricao":"1 peça de 2 quilos",
+		"valor": 35.50
+	},
+	{
+		"id": 3,
+		"nome": "Refrigerante",
+		"imagem": "",
+		"categoria_id":"5",
+		"descricao":"Pespi Twiste",
+		"valor": 6.0		
+	},
+	{
+		"id": 4,
+		"nome": "Farofa",
+		"imagem": "",
+		"categoria_id":"1",
+		"descricao":"Farofa de Manteiga e Alho",
+		"valor": 3.0
+	},
+	{
+		"id": 5,
+		"nome": "Pão",
+		"imagem": "",
+		"categoria_id":"1",
+		"descricao":"Pão Frânces",
+		"valor": 5.0
+	},
+	{
+		"id": 6,
+		"nome": "Bolo de Trigo",
+		"imagem": "",
+		"categoria_id":"1",
+		"descricao":"",
+		"valor": 15.50
+	},
+	{
+		"id": 7,
+		"nome": "Café",
+		"imagem": "",
+		"categoria_id":"5",
+		"descricao":"Café Extra Forte Premium",
+		"valor": 2.0
+	}
+	
+	
+]}
