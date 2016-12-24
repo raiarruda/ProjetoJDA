@@ -1,0 +1,25 @@
+{
+  "name": "projeto_jda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raiarruda/ProjetoJDA.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raiarruda/ProjetoJDA/issues"
+  },
+  "homepage": "https://github.com/raiarruda/ProjetoJDA#readme",
+  "dependencies": {
+    "angular": "^1.5.10",
+    "angular-ui-router": "^0.3.2",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0"
+  }
+}
