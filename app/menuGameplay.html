@@ -7,85 +7,313 @@
 		Remove this if you use the .htaccess -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-		<title>Bem Vindx</title>
+		<title>Bem Vindo ao Minimercado</title>
 		<meta name="author" content="Raissa Arruda">
 		<meta name="viewport" content="width=device-width; initial-scale=1.0">
 		<!--Estilos-->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/app.css" rel="stylesheet" />
+		<link href="css/chat.css" rel="stylesheet" />
 		<!--Scripts-->
 		<script src="lib/angular.js"></script>
 		<script src="js/app.js"></script>
 	</head>
-
-	<body>
-		<div class="clearfix" style="margin-bottom:100px;"></div>
+	<body class="gamePlayBody">
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="menuGameplay.html"><i class="fa fa-shopping-cart"> MiniMercado</i></a>
+		
+				</div>
+		
+				<div id="navbar" class="navbar-collapse collapse">
+		
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="menuComprar.html" ><span><img src="https://cdn0.iconfinder.com/data/icons/shopping-extras-set-1/512/21-512.png"
+							class="img-rounded" alt="Cinque Terre" width="24" height="24"/></span> Compras </a>
+						</li>
+						<li>
+							<a href="menuOrganizar.html" ><span><img src="https://cdn4.iconfinder.com/data/icons/documents-30/64/filing_triple-512.png"
+							class="img-rounded" alt="Cinque Terre" width="24" height="24"/></span> Organização </a>
+						</li>
+						<li>
+							<a href="#" ><span><img src="https://cdn0.iconfinder.com/data/icons/vector-huge-black-icons/512/help-512.png"
+							class="img-rounded" alt="Cinque Terre" width="24" height="24"/></span> Ajuda </a>
+						</li>
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div>
+		</nav>
 		<div class="container">
 			<div class="row">
 
-				<!--categorias de jogos-->
-
-				<div class="col-md-3">
-					<div style="margin-left: 100px;">
-
-						<div class="panel-body">
-							<div class="row ">
-								<a href="#" ><img src="lib/image/categoria-comprar.PNG" /> </a>
-							</div>
-							<div class="clearfix" style="margin-bottom:30px;"></div>
-							<div class="row ">
-								<a href="#" ><img src="lib/image/categoria-organizar.PNG" /> </a>
-							</div>
-							<div class="clearfix" style="margin-bottom:30px;"></div>
-							<div class="row ">
-								<a href="#" ><img src="lib/image/categoria-3.PNG" /> </a>
-							</div>
-							<div class="clearfix" style="margin-bottom:30px;"></div>
-							<div class="row ">
-								
-								<button class="btn btn-primary" type="button">
-									Messages <span class="badge">4</span>
-								</button>
-							</div>
-
-						</div>
-					</div>
-
-				</div>
-
 				<!--Lado alertas e chat-->
 
-				<div class="col-md-8">
+				<div class="col-md-12">
 					<div class="panel panel-danger">
 						<div class="panel-heading">
-							Alertas
+							Alertas <span class="badge">2</span>
 						</div>
 						<div class="panel-body">
-							<div class="row">
-								<!--Alertas-->
+							<div class="row alertscreen">
+								<ol class="chat">
+									<li class="other">
+										<div class="avatar"><img src="http://i.imgur.com/M4nTWZq.jpg" draggable="false"/>
+										</div>
+										<div class="msg">
+											<p>
+												Não esqueça de realizar a nova atividade no menu de missões.
+											</p>
+											<p></p>
+											<time>
+												20:17
+											</time>
+										</div>
+									</li>
+									<li class="other">
+										<div class="avatar"><img src="http://i.imgur.com/M4nTWZq.jpg" draggable="false"/>
+										</div>
+										<div class="msg">
+											<p>
+												Você sabia?
+											</p>
+											<p>
+												Há diferentes formar de se realizar as atividades propostas, tente ficar atento aos valores dos produtos.
+											</p>
+											<time>
+												20:18
+											</time>
+										</div>
+									</li>
+								</ol>
 							</div>
 						</div>
 					</div>
 					<div class="panel panel-success">
 						<div class="panel-heading">
-							Alertas
+							Chat <span class="badge">8</span>
 						</div>
 						<div class="panel-body">
-							<div class="row">
+							<div class="row chatscreen">
+								<ol class="chat">
+									<li class="other">
+										<div class="avatar"><img src="http://i.imgur.com/LtwbluT.gif" draggable="false"/>
+										</div>
+										<div class="msg">
+											<p>
+												Hola!
+											</p>
+											<p>
+												Te vienes a cenar al centro?
+												<emoji class="pizza"/>
+											</p>
+											<time>
+												20:17
+											</time>
+										</div>
+									</li>
+									<li class="other">
+										<div class="avatar"><img src="http://i.imgur.com/HYcn9xO.png" draggable="false"/>
+										</div>
+										<div class="msg">
+											<p>
+												Puff...
+											</p>
+											<p>
+												Aún estoy haciendo el contexto de Góngora...
+												<emoji class="books"/>
+											</p>
+											<p>
+												Mejor otro día
+											</p>
+											<time>
+												20:18
+											</time>
+										</div>
+									</li>
+									<li class="other">
+										<div class="avatar"><img src="http://i.imgur.com/ykHve6l.gif" draggable="false"/>
+										</div>
+										<div class="msg">
+											<p>
+												Qué contexto de Góngora?
+												<emoji class="suffocated"/>
+											</p>
+											<time>
+												20:18
+											</time>
+										</div>
+									</li>
+									<li class="other">
+										<div class="avatar"><img src="http://i.imgur.com/HYcn9xO.png" draggable="false"/>
+										</div>
+										<div class="msg">
+											<p>
+												El que mandó Marialu
+											</p>
+											<p>
+												Es para mañana...
+											</p>
+											<time>
+												20:18
+											</time>
+										</div>
+									</li>
+									<li class="other">
+										<div class="avatar"><img src="http://i.imgur.com/ykHve6l.gif" draggable="false"/>
+										</div>
+										<div class="msg">
+											<p>
+												<emoji class="scream"/>
+											</p>
+											<p>
+												Pásamelo!
+												<emoji class="please"/>
+											</p>
+											<time>
+												20:18
+											</time>
+										</div>
+									</li>
+									<li class="other">
+										<div class="avatar"><img src="http://i.imgur.com/ykHve6l.gif" draggable="false"/>
+										</div>
+										<div class="msg">
+											<p>
+												Gracias!
+												<emoji class="hearth_blue"/>
+											</p>
+											<time>
+												20:20
+											</time>
+										</div>
+									</li>
+									<li class="other">
+										<div class="avatar"><img src="http://i.imgur.com/HYcn9xO.png" draggable="false"/>
+										</div>
+										<div class="msg">
+											<p>
+												Te apetece jugar a Minecraft?
+											</p>
+											<time>
+												18:03
+											</time>
+										</div>
+									</li>
+									<li class="other">
+										<div class="avatar"><img src="http://i.imgur.com/LtwbluT.gif" draggable="false"/>
+										</div>
+										<div class="msg">
+											<p>
+												Venga va, hace ya mucho que no juego...
+											</p>
+											<time>
+												18:07
+											</time>
+										</div>
+									</li>
+									<li class="self">
+										<div class="avatar"><img src="http://i.imgur.com/HYcn9xO.png" draggable="false"/>
+										</div>
+										<div class="msg">
+											<p>
+												Ehh, me crashea el Launcher...
+												<emoji class="cryalot"/>
+											</p>
+											<time>
+												18:08
+											</time>
+										</div>
+									</li>
+									<li class="other">
+										<div class="avatar"><img src="http://i.imgur.com/DY6gND0.png" draggable="false"/>
+										</div>
+										<div class="msg">
+											<p>
+												<emoji class="lmao"/>
+											</p>
+											<time>
+												18:08
+											</time>
+										</div>
+									</li>
+									<li class="self">
+										<div class="avatar"><img src="http://i.imgur.com/HYcn9xO.png" draggable="false"/>
+										</div>
+										<div class="msg">
+											<p>
+												Es broma
+											</p>
+											<p>
+												Ataque Moai!
+											</p>
+											<p>
+												<span>
+													<emoji class="moai"/>
+												</span><span>
+													<emoji class="moai"/>
+												</span><span>
+													<emoji class="moai"/>
+												</span><span>
+													<emoji class="moai"/>
+												</span><span>
+													<emoji class="moai"/>
+												</span><span>
+													<emoji class="moai"/>
+												</span>
+											</p>
+											<time>
+												18:09
+											</time>
+										</div>
+									</li>
+									<li class="other">
+										<div class="avatar"><img src="http://i.imgur.com/DY6gND0.png" draggable="false"/>
+										</div>
+										<div class="msg">
+											<p>
+												Copón
+											</p>
+											<p>
+												<emoji class="funny"/>
+											</p>
+											<time>
+												18:08
+											</time>
+										</div>
+									</li>
+								</ol>
 								<!--Alertas-->
 							</div>
-							<hr>
 							<div class="row">
-								<div class="col-md-4 col-sm-4">
-									<!--chat-->
+								<br />
+							</div>
+							<div class="row">
+								<div class="col-sm-10">
+									<input class="textarea" type="text" placeholder="Type here!"/>
+								</div>
+								<div class="col-sm-2">
+									<button class="btn btn-primary btn-fill" type="button">
+										Enviar
+									</button>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-				<script src="lib/jquery-3.1.1.min.js"></script>
-				<!-- Include all compiled plugins (below), or include individual files as needed -->
-				<script src="lib/bootstrap.min.js"></script>
+				
+			</div>
+		</div>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	</body>
 </html>

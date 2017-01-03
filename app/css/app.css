@@ -3,6 +3,14 @@ body {
     padding-top: 70px;
 }
 
+.gamePlayBody {
+    background-image: url("../imagens/background/vol52_render.jpg");
+}
+
+.gamePlayMenu {	 
+    background-color: #FFFFFF;
+	border-radius: 25px;
+}
 
 /*.centralizarLogin {*/
     /*max-width: 400px;*/
