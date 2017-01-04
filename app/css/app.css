@@ -12,6 +12,10 @@ body {
 	border-radius: 25px;
 }
 
+.imgPersona {	 
+   width: 100%;
+}
+
 /*.centralizarLogin {*/
     /*max-width: 400px;*/
     /*margin-left: auto;*/
