@@ -1,39 +1,23 @@
-<div class="row" style="max-height: 300px; min-height: 300px">
+<div class="row">
 	<div class="col-sm-3 col-md-3" ng-repeat="produto in produtos">
 		<div class="thumbnail">
 			<!--<img ng-src='{{produto.image}}' alt="thumb01">-->
-			<img src='{{produto.imagem}}' alt="thumb01">
+			<img src='app/imagens/produtos/produto.jpg' alt="thumb01" data-toggle="tooltip" title="{{produto.descricao}}">
 			<div class="caption">
 				<h3>{{produto.nome}}</h3>
-				<p>
-					{{produto.descricao}}
-				</p>
-				<p >
-					{{produto.valor | currency : "R$" : 2}}
-				</p>
-			</div>
-			<div class="btn-group pager" role="group">
-				<button class="btn btn-danger btn-sm pull-left" ng-click="removerProdutoNoCarrinho(produto)">
-					Remover
-				</button>
-				<button class="btn btn-primary btn-sm" ng-click="adicionarProdutoNoCarrinho(produto)">
-					Comprar
-				</button>
-			</div>
-			<!--<div class="row">
-			<div class="col-md-6 col-xs-12">
-					<button class="btn btn-danger btn-sm pull-left" ng-click="removerProdutoNoCarrinho(produto)">
-						Remover
-					</button>
-
+				<div class="row">
+					<div class="col-md-6 col-xs-12">
+						<button class="btn btn-primary" ng-click="adicionarProdutoNoCarrinho(produto)">
+							Comprar
+						</button>
+					</div>
+					<div class="col-md-6 col-xs-12">
+						<button class="btn btn-danger" ng-click="removerProdutoNoCarrinho(produto)">
+							Remover
+						</button>
+					</div>
 				</div>
-				<div class="col-md-6 col-xs-12">
-					<button class="btn btn-primary btn-sm" ng-click="adicionarProdutoNoCarrinho(produto)">
-						Comprar
-					</button>
-				</div>
-			</div>-->
+			</div>
 		</div>
 	</div>
-</div>
 </div>

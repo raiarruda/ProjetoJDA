@@ -3,6 +3,18 @@ body {
     padding-top: 70px;
 }
 
+.gamePlayBody {
+    background-image: url("../imagens/background/vol52_render.jpg");
+}
+
+.gamePlayMenu {	 
+    background-color: #FFFFFF;
+	border-radius: 25px;
+}
+
+.imgPersona {	 
+   width: 100%;
+}
 
 /*.centralizarLogin {*/
     /*max-width: 400px;*/
@@ -11,12 +23,10 @@ body {
     /*margin-top: 100px;*/
 /*}*/
 
-.juntarBotoes {
-    max-width: 150px;
-    margin-left:auto;
-    margin-right: auto;
+/*.juntarBotoesLogin {*/
+    /*max-width: 200px;*/
 
-}
+/*}*/
 
 /*.marketing {*/
     /*text-align: center;*/

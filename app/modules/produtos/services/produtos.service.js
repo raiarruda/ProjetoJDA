@@ -8,12 +8,23 @@
     function ProdutoService($q, $http){
         var data = [];
 
-        function list(){
+        function list(mission){
             var defer = $q.defer();
-           	 $http.get('app/data/produtos.json').then(function (data){
-                 defer.resolve(data.data.data);
-                 console.log(data.data);
-             });
+                        
+            if(mission == 'c01')
+            {
+		       	 $http.get('app/data/produtosC01.json').then(function (data){
+		             defer.resolve(data.data.data);
+		             console.log(data.data);
+		         });
+            }
+            else
+            {
+		       	 $http.get	('app/data/produtosC00.json').then(function (data){
+		             defer.resolve(data.data.data);
+		             console.log(data.data);
+		         });
+            }
 
            // defer.resolve(data);
             return defer.promise;
@@ -24,5 +35,4 @@
         };
 
     }
-
 })();
