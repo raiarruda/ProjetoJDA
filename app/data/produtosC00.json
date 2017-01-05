@@ -62,6 +62,38 @@
 		"categoria_id":"5",
 		"descricao":"Café Extra Forte Premium",
 		"valor": 2.0
+	},
+	{
+		"id": 8,
+		"nome": "Croissant",
+		"imagem": "app/imagens/produtos/produto.jpg",
+		"categoria_id":"1",
+		"descricao":"Croissant, em português, croassã, é um pão de massa folhada em formato de meia-lua, feito de farinha, açúcar, sal, leite, fermento, manteiga e ovo para pincelar.",
+		"valor": 3.8
+	},
+	{
+		"id": 9,
+		"nome": "Suco de Caju",
+		"imagem": "app/imagens/produtos/produto.jpg",
+		"categoria_id":"5",
+		"descricao":"Suco de caju com 5% de polpa da fruta.",
+		"valor": 4.25
+	},
+	{
+		"id": 10,
+		"nome": "Leite",
+		"imagem": "app/imagens/produtos/produto.jpg",
+		"categoria_id":"5",
+		"descricao":"Leite UHT Gordo.",
+		"valor": 5.0
+	},
+	{
+		"id": 11,
+		"nome": "Achocolatado",
+		"imagem": "app/imagens/produtos/produto.jpg",
+		"categoria_id":"5",
+		"descricao":"Chocolate em pó para mistura de bebida.",
+		"valor": 6.19
 	}
 	
 	
