@@ -2,7 +2,7 @@
 	{
 		"id": 0,
 		"nome": "Shampoo",
-		"imagem": "app/imagens/produtos/produto.jpg",
+		"imagem": "app/imagens/produtos/shampoo.jpg",
 		"categoria_id":"3",
 		"descricao":"Para Todos os Cabelos",
 		"valor": 10.0
@@ -10,7 +10,7 @@
 	{
 		"id": 1,
 		"nome": "Sal Grosso",
-		"imagem": "app/imagens/produtos/produto.jpg",
+		"imagem": "app/imagens/produtos/sal-grosso.jpg",
 		"categoria_id":"1",
 		"descricao":"Marca X",
 		"valor": 1.0
@@ -18,7 +18,7 @@
 	{
 		"id": 2,
 		"nome": "Picanha",
-		"imagem": "app/imagens/produtos/produto.jpg",
+		"imagem": "app/imagens/produtos/picanha.jpg",
 		"categoria_id":"1",
 		"descricao":"1 peça de 2 quilos",
 		"valor": 35.50
@@ -26,7 +26,7 @@
 	{
 		"id": 3,
 		"nome": "Refrigerante",
-		"imagem": "app/imagens/produtos/produto.jpg",
+		"imagem": "app/imagens/produtos/refri.jpg",
 		"categoria_id":"5",
 		"descricao":"Pespi Twiste",
 		"valor": 6.0		
