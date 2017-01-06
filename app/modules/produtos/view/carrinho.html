@@ -10,9 +10,9 @@
 								<h4><span class="glyphicon glyphicon-shopping-cart"></span> Carrinho</h4>
 							</div>
 							<div class="col-md-6">
-								<button class="btn btn-primary btn-sm pull-right">
-									<span class="glyphicon glyphicon-share-alt"></span> Continue a comprar
-								</button>
+								
+								<a  class="btn btn-primary btn-sm pull-right" ui-sref="app.produtos.list">Continue a comprar 	<span class="glyphicon glyphicon-share-alt"></span> </a>
+								
 							</div>
 						</div>
 					</div>
@@ -22,23 +22,26 @@
 
 					<div class="row">
 						<div class="col-md-2 col-xs-12">
-							<img class="img-responsive" src="app/imagens/produtos/produto.jpg">
+							<img class="img-responsive" src={{produto.imagem}}>
 						</div>
-						<div class="col-md-4 col-xs-12">
+						<div class="col-md-4 col-xs-12 ">
 							<h4><strong>{{produto.nome}}</strong></h4>
 							<h4><small>{{produto.descricao}}</small></h4>
 						</div>
 						<div class="col-md-6 col-xs-12">
-							<div class="col-md-6 text-right">
-						
+							<div class="col-md-6 text-right ">
+									<h4><strong>	{{produto.valor | currency : "R$" : 2}}</h4></strong>
+					
 							</div>
 							<div class="col-md-4 col-xs-9">
-								{{produto.qtd}}
+						<h4><strong>	{{produto.qtd}}  unidade(s) </h4></strong>
 							</div>
-							<div class="col-md-2 col-xs-2">
-								<button class="btn btn-sm btn-danger">
+
+							<h4><strong>= {{produto.qtd*produto.valor| currency : "R$" : 2}}</strong></h4>
+						<!--	<div class="col-md-2 col-xs-2">
+								<button class="btn btn-sm btn-danger" ng-click="removerProdutoNoCarrinho(produto)">
 									<span class="glyphicon glyphicon-trash"></span>
-								</button>
+								</button>-->
 							</div>
 						</div>
 					</div>

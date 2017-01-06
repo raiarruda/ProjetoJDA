@@ -1,6 +1,7 @@
 body {
     min-height: 2000px;
     padding-top: 70px;
+    background-image: url("../imagens/background/vol52_render.jpg");
 }
 
 .gamePlayBody {
@@ -16,12 +17,15 @@ body {
    width: 100%;
 }
 
-/*.centralizarLogin {*/
-    /*max-width: 400px;*/
-    /*margin-left: auto;*/
-    /*margin-right: auto;*/
-    /*margin-top: 100px;*/
-/*}*/
+.centralizarLogin {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    background-color: #FFFFFF;
+    padding: 80px 80px 80px 80px;
+    border-radius: 10px 10px 10px 10px;
+}
 
 /*.juntarBotoesLogin {*/
     /*max-width: 200px;*/

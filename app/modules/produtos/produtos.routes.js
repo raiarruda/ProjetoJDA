@@ -24,12 +24,6 @@
             	templateUrl:'app/modules/produtos/view/carrinho.html'
             })
             ;
-        // .state('app.dashboard', {s
-        //     url: '/dashboard',
-        //     title: 'Dashboard',
-        //     templateUrl: helper.basepath('dashboard.html'),
-        //     resolve: helper.resolveFor('flot-chart','flot-chart-plugins', 'weather-icons')
-        // })
 
     }
 
